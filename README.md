@@ -50,6 +50,7 @@
 </body>
 </html>
 
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -63,10 +64,9 @@
     <header>
         <nav>
             <div class="navbar">
-                
+                <img class="logo" src="./HeaderLeft.png" >
                 <div class="nav">
                     <ul>
-                        <li><a href="#"><img class="logo" src="./HeaderLeft.png" ></a></li>
                         <li><a href="#">Home</a></li>
                         <li><a href="#">TV Shows</a></li>
                         <li><a href="#">Movies</a></li>
@@ -77,16 +77,18 @@
 
                 <div class="nav">
                     <ul>
-                        <li><a href="#"><i class="fa fa-search"></i></a></li>
+                        <li><a href="#"><input class="input" type="search" placeholder="Search Here"><i class="fa fa-search"></i></a></li>
                         <li><a href="#">Kids</a></li>
                         <li><a href="#"><i class="fa fa-gift"></i></a></li>
-                        <li><a href="#"><img  class="logo1" src="./red.png" height="20px"></a><a href="#"><img src="./DownArrow.png" ></a></li>
+                        <li><a href="#"><img  class="logo1" src="./red.png" height="20px"><img class="logo1"src="./DownArrow.png" ></a></li>
                         
                     </ul>
                     
 
                </div>
         </nav>
+
+    
     </header>
    
     <div class="first-page">
@@ -99,9 +101,9 @@
                  <p> As the charismatic businessman Emir steps into her </p>
                  <button class="button1"><i class="fa fa-play"></i>Play</button>
                  <button class="button2"><i class="fa fa-info-circle"></i>More info</button>
-                 <h3>Popular on Netflix</h>
+                 <h3>Popular on Netflix</h3>
 
-                    <div class="one">
+                    <div class="one" >
                         <img src="./1.png" >
                         <img src="./2.png" >
                         <img src="./3.png"  >
@@ -172,7 +174,7 @@
         <img src="./5 2.png">
         <img src="/5 3.png">
         <img src="./5 4.png">
-        <img src="./5 6.png">
+        <img src="./5 6.png" >
     </div>
 
 
@@ -242,7 +244,6 @@
 </body>
 </html>
 
-
 *{
     margin: 0;
     padding: 0;
@@ -268,6 +269,7 @@ body{
     align-items: center;
     gap: 30px;
 }
+
 .pics {
     transition: transform 0.5s;
 }
@@ -298,9 +300,12 @@ body{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 9px;
+    padding: 1px;
     border-radius: 10px;
     box-shadow: 0 0 10px;
+}
+.navbar .logo{
+    margin-bottom: 10px;
 }
 .nav li{
     display: inline-block;
@@ -308,15 +313,18 @@ body{
     margin-left: 10px;
     margin-bottom: 5px;
     list-style: none;
+    cursor: pointer;
+    
 
 }
+
 .logo{
     margin-top: 15px;
     margin-left: 10px;
 }
-.logo1{
+.navbar .logo1{
     margin-right: 10px;
-    margin-top: 10px;
+    margin-top: 20px;
 }
 .nav li a{
     color: whitesmoke;
@@ -324,6 +332,15 @@ body{
 }
 .nav li a:hover {
     background-color: red;
+}
+input{
+    padding: 2px;
+    border-radius:2px ;
+    background-color: transparent;
+    border-color:white;
+    text-align: center;
+    margin-right: 7px;
+    margin-bottom: 30px;
 }
 .first-page-data h1 {
    color: white;
@@ -361,7 +378,7 @@ body{
 }
 .first-page {
     display: flex;
-    justify-content: flex-start;
+    justify-content: center;
     align-items: center;
     height: 100vh;
     background: url('./MoviePoster.png') no-repeat center /cover;
@@ -409,6 +426,7 @@ body{
     justify-content: center;
     align-items: center;
     padding-top: 20px;
+    gap: 10px;
     cursor: pointer;
     margin-top: 10px;
     transition: transform 0.5s;
@@ -479,4 +497,178 @@ body{
 }
 .final:hover{
     background-color: red;
+}
+
+@media (max-width: 768px) {
+ .navbar img{
+        margin-bottom: 20px;
+    }
+ header nav{
+    width: 100%;
+    flex-wrap: nowrap;
+}
+  .navbar {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  nav li {
+    margin-top: 10px;
+    text-align: center;
+  }
+  nav .logo1{
+    height: 10px;
+    padding: 10px;;
+
+  }
+    .container-data {
+        width: 100%;
+        height: 500px;
+        margin: 20px; 
+        
+    }
+    .container .btn{
+         width: 40%;
+         margin-left: 30%;   
+    }
+
+    .container h1{
+        margin-top: 110px;
+    }
+
+    .pics {
+        width: 80%; 
+    }
+
+    .btn {
+        width: 80%; 
+    }
+
+    .first-page {
+        flex-direction: column;
+        justify-content: flex-start; 
+        height: auto;
+    }
+    .span{
+        display: flex;
+        justify-content: center;
+        margin-right: 90px;
+        font-size: 30px;
+    }
+    .button1,.button2{
+        width: 18%;
+    }
+    .one{
+        flex-wrap: wrap;
+        gap:1px;
+    }
+    .last{
+        margin-right: 20px;
+    }
+
+    .first-page-data {
+        text-align: center; 
+        margin: 0 auto; 
+    }
+
+    .first-page-data h1, .first-page-data h2 {
+        font-size: 30px; 
+    }
+
+    .first-page-data p {
+        font-size: 16px; 
+    }
+
+    .second-page {
+        flex-wrap: wrap; 
+        justify-content: center; 
+    }
+
+    .second-page img {
+        width: 45%; 
+        margin: 5px; 
+    }
+}
+
+@media (max-width: 480px) {
+
+    .navbar{
+        text-align: center;
+        flex-direction: column;
+        padding-left: 60px; 
+       
+    }
+    .navbar .logo{
+        margin-right: 60px;
+    }
+    .nav li a{
+        flex-direction: column;
+        flex-wrap: nowrap;
+        font-size: 18px;
+        margin: 60px;
+    }
+    .nav input{
+        width: 60px;
+    }
+    .nav i{
+        font-size: 18px;
+    }
+    .btn{
+        height: auto;
+    }
+    .button1{
+        width: 20%;
+        padding: 9px;
+        margin-bottom: 7px;
+        padding-bottom: 10px;
+    }
+    .button2{
+        width: 20%;
+        padding: 2px;
+        margin-right: 40px;
+        padding-bottom: 10px;
+    }
+    .one img{
+        height: auto;
+        width: 75%;
+        margin-top: 10px;
+    }
+    .first-page-data h1 {
+        margin-top: 20px;
+        font-size: 24px; 
+    }
+
+    .first-page-data h2 {
+        font-size: 20px; 
+    }
+
+    .first-page-data p {
+        font-size: 14px; 
+    }
+
+    .second-page img {
+        width: 90%; 
+    }
+    .foot-data{
+        text-align: center;
+        flex-direction: column;
+    }
+  
+    .container-data {
+        flex-direction: column;
+       height: 50%;
+       margin-left: 100px;
+       margin-bottom: 10px;
+       gap: -10px;
+    }
+    .pics{
+        margin-top: -20px;
+    }
+    .container.btn{
+        margin-left: 10px;
+    }
+    .container-data p{
+        text-align: start;
+        margin-left: 30px;
+    }
 }
